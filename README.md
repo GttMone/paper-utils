@@ -6,12 +6,12 @@ Most utilities use the plugin instance, therefore it is required to initialize t
 It should be called within the `onEnable` method, preferably at the very top. That way, all other utility classes would have access to the plugin instance and therefore work correctly.
 
 ```java
-    @Override
-    public void onEnable() {
-        try {
-            Plugin.init(this);
-        } catch (Exception ignored) {}
-    }
+@Override
+public void onEnable() {
+    try {
+        Plugin.init(this);
+    } catch (Exception ignored) {}
+}
 ```
 
 You may notice that the method is surrounded by a try-catch block. 
