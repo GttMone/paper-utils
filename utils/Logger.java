@@ -1,4 +1,4 @@
-package yourpackage.utils;
+package site.gttmone.cowCannon.utils;
 
 import org.jetbrains.annotations.NotNull;
 
