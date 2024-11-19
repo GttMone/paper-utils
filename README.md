@@ -34,5 +34,14 @@ onCooldown = true;
 Scheduler.setTimeout(() -> onCooldown = false, 500);
 ```
 
+## DataStore
+
+The DataStore is a wrapper around Paper's [Persistent Data Container (PDC)](https://docs.papermc.io/paper/dev/pdc) which allows data to be stored for a whole range of objects, such as items, entities, and block entities.
+The data persists between server restarts and reloads, so this method is very useful.
+```java
+DataStore.setData(entity, "my-key", PersistentDataType.STRING, "example-value"); // Sets a key-value pair with the key being "my-key" and the value being a string "example-value".
+String data = DataStore.getData(cow, "my-key", PersistentDataType.STRING); // Gets the value of the "my-key" key.
+```
+
 # Contribution
 I will be more than happy to merge any pull requests for additional features or improvements, as I'm very new to Java and still learning.
