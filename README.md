@@ -8,15 +8,10 @@ It should be called within the `onEnable` method, preferably at the very top. Th
 ```java
 @Override
 public void onEnable() {
-    try {
-        Plugin.init(this);
-    } catch (Exception ignored) {}
+   Plugin.init(this);
 }
 ```
-
-You may notice that the method is surrounded by a try-catch block. 
-This is intentional, because the method will throw an error if the Plugin utility class is reinitialized.
-This is done to prevent re-initialization from other than the main class.
+Note that once initialized, the Plugin utility class can not be reinitialized to prevent overriding of the plugin instance.
 
 # Usage
 
