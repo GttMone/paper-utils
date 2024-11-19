@@ -1,8 +1,7 @@
-package site.gttmone.cowCannon.utils;
+package yourpackage.utils;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import org.jetbrains.annotations.NotNull;
-import site.gttmone.cowCannon.CowCannon;
 
 public abstract class Plugin {
     private static JavaPlugin plugin;
