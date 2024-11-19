@@ -1,4 +1,4 @@
-package site.gttmone.cowCannon.utils;
+package yourpackage.utils;
 
 import io.papermc.paper.util.Tick;
 import org.bukkit.Bukkit;
