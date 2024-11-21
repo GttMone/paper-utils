@@ -1,4 +1,4 @@
-package site.gttmone.cowCannon.utils;
+package yourpackage.utils;
 
 import org.bukkit.NamespacedKey;
 import org.bukkit.persistence.PersistentDataContainer;
