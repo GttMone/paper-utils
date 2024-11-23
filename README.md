@@ -28,10 +28,16 @@ Logger.log("Something went wrong", Level.SEVERE);
 
 ## Scheduler
 
-The scheduler is used to delay a task. It's heavily inspired by the JavaScript setTimeout function, therefore the accepted time is in miliseconds.
+The scheduler is used to delay or repeatedly execute a task. It's heavily inspired by the JavaScript setTimeout and setInterval functions, therefore the accepted time is in miliseconds.
 ```java
 onCooldown = true;
 Scheduler.setTimeout(() -> onCooldown = false, 500);
+```
+
+```java
+Scheduler.setInterval(task -> {
+   Logger.log("This should run every second!");
+}, 1000);
 ```
 
 ## DataStore
