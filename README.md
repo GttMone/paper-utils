@@ -49,5 +49,43 @@ DataStore.setData(entity, "my-key", PersistentDataType.STRING, "example-value");
 String data = DataStore.getData(cow, "my-key", PersistentDataType.STRING); // Gets the value of the "my-key" key.
 ```
 
+## Components
+
+A more readable wrapper for converting a [MiniMessage](https://docs.papermc.io/paper/dev/component-api/introduction#minimessage) to a [Component](https://docs.papermc.io/paper/dev/component-api/introduction).
+
+Useful links regarding this topic are:
+- https://docs.papermc.io/paper/dev/component-api/introduction
+- https://docs.advntr.dev/minimessage/index.html
+- https://webui.advntr.dev
+
+```java
+import static yourpackage.utils.Components.mm;
+
+mm("<red>This is a red message with a <blue>blue highlight.");
+```
+
+## Sounds
+
+Easily create and modify [Kyori Adventure](https://docs.advntr.dev/sound.html) sounds:
+
+```java
+import net.kyori.adventure.sound.Sound;
+
+Sound plingSound = Sounds.get(org.bukkit.Sound.BLOCK_NOTE_BLOCK_PLING);
+Sound plingSoundHigh = Sounds.changePitch(plingSound, 2F);
+
+Bukkit.getServer().playSound(plingSound);
+```
+
+## Titles
+
+A wrapper method with nicer syntax for showing titles that supports [MiniMessage](#components).
+Currently I've only implemented global titles for all players, but maybe I'll add more in the future.
+
+```java
+Titles.showServerTitle("<green>This should appear instantly, stay for one second and fade for one second!", 0, 1, 1);
+Titles.showServerTitle("<gold>Just a normal gold title");
+```
+
 # Contribution
 I will be more than happy to merge any pull requests for additional features or improvements, as I'm very new to Java and still learning.
