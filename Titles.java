@@ -16,7 +16,7 @@ public abstract class Titles {
         Bukkit.getServer().showTitle(
                 Title.title(Components.mm(miniMessageTitle),
                         Component.empty(),
-                        Title.Times.times(Duration.ofSeconds(fadeIn), Duration.ofSeconds(stay), Duration.ofSeconds(fadeOut)))
+                        Title.Times.times(Duration.ofSeconds(fadeInSeconds), Duration.ofSeconds(staySeconds), Duration.ofSeconds(fadeOutSeconds)))
         );
     }
 }
