@@ -12,7 +12,7 @@ public abstract class Titles {
         Bukkit.getServer().showTitle(Title.title(Components.mm(miniMessageTitle), Component.empty()));
     }
 
-    public static void showServerTitle(@NotNull String miniMessageTitle, long fadeIn, long stay, long fadeOut) {
+    public static void showServerTitle(@NotNull String miniMessageTitle, long fadeInSeconds, long staySeconds, long fadeOutSeconds) {
         Bukkit.getServer().showTitle(
                 Title.title(Components.mm(miniMessageTitle),
                         Component.empty(),
