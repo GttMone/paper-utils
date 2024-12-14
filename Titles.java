@@ -25,11 +25,32 @@ public abstract class Titles {
         player.showTitle(Title.title(Components.mm(miniMessageTitle), Component.empty()));
     }
 
+    public static void showTitleWithSubtitle(@NotNull Player player, @NotNull String miniMessageTitle, @NotNull String miniMessageSubtitle) {
+        player.showTitle(Title.title(Components.mm(miniMessageTitle), Components.mm(miniMessageSubtitle)));
+    }
+
     public static void showTitle(@NotNull Player player, @NotNull String miniMessageTitle, long fadeIMilis, long stayMilis, long fadeOutMilis) {
         player.showTitle(
                 Title.title(Components.mm(miniMessageTitle),
                         Component.empty(),
                         Title.Times.times(Duration.ofMillis(fadeIMilis), Duration.ofMillis(stayMilis), Duration.ofMillis(fadeOutMilis)))
+        );
+    }
+
+    public static void showTitleWithSubtitle(
+            @NotNull Player player,
+            @NotNull String miniMessageTitle,
+            @NotNull String miniMessageSubtitle,
+            long fadeIMilis,
+            long stayMilis,
+            long fadeOutMilis
+    ) {
+        player.showTitle(
+                Title.title(
+                        Components.mm(miniMessageTitle),
+                        Components.mm(miniMessageSubtitle),
+                        Title.Times.times(Duration.ofMillis(fadeIMilis), Duration.ofMillis(stayMilis), Duration.ofMillis(fadeOutMilis))
+                )
         );
     }
 }
